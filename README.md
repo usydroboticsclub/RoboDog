@@ -15,3 +15,6 @@ https://docs.google.com/document/d/10oTWnJSjZQA49-zwCSayfSq9JB1JXsvcdztj8M00Js8/
 ## Other Repos
 - Blacksheep has good PCB design and kinematics explanation [here](https://github.com/Blacksheep909/SpotMicroESP32-Nitro-Fork/tree/master)
 - unsure https://github.com/MZandtheRaspberryPi/spot_micro_demo
+
+# Standford Dog
+https://github.com/Nate711/StanfordDoggoProject 
