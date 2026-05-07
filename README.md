@@ -20,7 +20,10 @@ https://docs.google.com/document/d/10oTWnJSjZQA49-zwCSayfSq9JB1JXsvcdztj8M00Js8/
 
 # Standford Dog
 https://github.com/Nate711/StanfordDoggoProject 
-
+## Documentation
+[here](https://pupper-v3-documentation.readthedocs.io/en/latest/index.html)
+## CS123 Course Page
+[here](https://cs123-stanford.readthedocs.io/en/latest/#)
 
 
 
