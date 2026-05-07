@@ -27,4 +27,13 @@ https://github.com/Nate711/StanfordDoggoProject
 
 
 
+# USRC apporach with Dog
+1. Ordered
+   - X12 MG996R Servos
+   - PCA9685 : I2C Servo Driver
+   - ZX-052 : 5V Stepdown 
+   - SZBK07 : 20A buck converter
+   - 625zz : Bearings
+2. Printer Legs and chassis 3D parts
+3. 
 
