@@ -6,3 +6,7 @@ https://docs.google.com/document/d/10oTWnJSjZQA49-zwCSayfSq9JB1JXsvcdztj8M00Js8/
 
 # Interesting Sources of information
 - [Comparing SG90 to MG90S & MG996R Servo Motors](https://zaitronics.com.au/blogs/guides/comparing-sg90-mg90s-and-mg996r-servos)
+
+
+# Best Dog Repos
+- We printed based off [this](https://github.com/michaelkubina/SpotMicroESP32) repo.
