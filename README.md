@@ -17,6 +17,7 @@ https://docs.google.com/document/d/10oTWnJSjZQA49-zwCSayfSq9JB1JXsvcdztj8M00Js8/
 ## Other Repos
 - Blacksheep has good PCB design and kinematics explanation [here](https://github.com/Blacksheep909/SpotMicroESP32-Nitro-Fork/tree/master)
 - unsure https://github.com/MZandtheRaspberryPi/spot_micro_demo
+- [Mike4192](https://github.com/mike4192/spotMicro/tree/master) : mikes orginal ros 1 implementation
 
 # Standford Dog
 https://github.com/Nate711/StanfordDoggoProject 
@@ -29,11 +30,20 @@ https://github.com/Nate711/StanfordDoggoProject
 
 # USRC apporach with Dog
 1. Ordered
-   - X12 MG996R Servos
+   - x12 MG996R Servos : metal gear version
    - PCA9685 : I2C Servo Driver
-   - ZX-052 : 5V Stepdown 
-   - SZBK07 : 20A buck converter
+   - LM2596 : 5V Stepdown
+   - SZBK07 : 300W, 20A DC-DC step-down (buck) converter
    - 625zz : Bearings
 2. Printer Legs and chassis 3D parts
-3. 
 
+
+# Log Book
+## 7th May 2025
+<img width="4096" height="3072" alt="IMG20260507151431" src="https://github.com/user-attachments/assets/cdc9132c-4720-4951-bc9c-7188d3193563" />
+
+- Today we worked on extracting the best way to power the Dog. We realised that PCA9685 has a seperate servo (6V+) and circuit logic power via (5V+ Vcc)
+- Following Mike's layout, we resolved to power the PCA9685 with the SZBK07 at 6V with maybe a fuse in the middle to protect the PCA and power the Raspberry Pi using the LM2596 at 5V.
+- Antonio suggested to power the servos seperately since the PCA9685 internal rails cap out at 12A.
+- We note most online implementations do not power the PCA9685 with a SZBK07 and instead directly hook into the battery.
+- Please see circuit diagram above for our first iteration circuit design, based on (mikes)[https://github.com/michaelkubina/SpotMicroESP32/tree/master/electronics] circuit design. I note the current and voltage sensors are not nesscary to protect ADC pins on the Raspberry pi we are not using.
