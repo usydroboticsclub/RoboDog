@@ -12,7 +12,7 @@ https://docs.google.com/document/d/10oTWnJSjZQA49-zwCSayfSq9JB1JXsvcdztj8M00Js8/
 - We printed based off [this](https://github.com/michaelkubina/SpotMicroESP32) repo ESP32 based.
 - Online Guide for R-pi with Renforcement learning [here](https://spotmicroai.readthedocs.io/en/latest/gettingStarted/) 
 - Best Kinematics Explnation, Interesting Servo and electronics guide for R-pi set up [here](https://github.com/MZandtheRaspberryPi/spot_micro_demo).
-- (vertueux)[https://github.com/MZandtheRaspberryPi/spot_micro_demo]: ROS2 implementation good R-pi setup.
+- [vertueux](https://github.com/MZandtheRaspberryPi/spot_micro_demo): ROS2 implementation good R-pi setup.
 
 ## Other Repos
 - Blacksheep has good PCB design and kinematics explanation [here](https://github.com/Blacksheep909/SpotMicroESP32-Nitro-Fork/tree/master)
