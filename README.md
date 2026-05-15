@@ -13,6 +13,7 @@ https://docs.google.com/document/d/10oTWnJSjZQA49-zwCSayfSq9JB1JXsvcdztj8M00Js8/
 - Online Guide for R-pi with Renforcement learning [here](https://spotmicroai.readthedocs.io/en/latest/gettingStarted/) 
 - Best Kinematics Explnation, Interesting Servo and electronics guide for R-pi set up [here](https://github.com/MZandtheRaspberryPi/spot_micro_demo).
 - [vertueux](https://github.com/MZandtheRaspberryPi/spot_micro_demo): ROS2 implementation good R-pi setup.
+- RL Guides for spot dog using Ri Pi [here](https://spotmicroai.readthedocs.io/en/latest/training/#reinforcement-learning-environment) orignal repo [here](https://github.com/OpenQuadruped/spot_mini_mini#reinforcement-learning-agent-training) drawback is its ROS 1.
 
 ## Other Repos
 - Blacksheep has good PCB design and kinematics explanation [here](https://github.com/Blacksheep909/SpotMicroESP32-Nitro-Fork/tree/master)
@@ -47,3 +48,8 @@ https://github.com/Nate711/StanfordDoggoProject
 - Antonio suggested to power the servos seperately since the PCA9685 internal rails cap out at 12A.
 - We note most online implementations do not power the PCA9685 with a SZBK07 and instead directly hook into the battery.
 - Please see circuit diagram above for our first iteration circuit design, based on (mikes)[https://github.com/michaelkubina/SpotMicroESP32/tree/master/electronics] circuit design. I note the current and voltage sensors are not nesscary to protect ADC pins on the Raspberry pi we are not using.
+
+## 14th May 2025
+- The Servo motors finally arrived!
+- We spent the day building the robotic dog. Pictures TODO
+- We have concerns the RL learning module in our repo won't trasnfer to RL for the robo dog.
