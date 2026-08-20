@@ -40,16 +40,28 @@ https://github.com/Nate711/StanfordDoggoProject
 
 
 # Log Book
-## 7th May 2025
+## 7th May 2026
 <img width="4096" height="3072" alt="IMG20260507151431" src="https://github.com/user-attachments/assets/cdc9132c-4720-4951-bc9c-7188d3193563" />
 
 - Today we worked on extracting the best way to power the Dog. We realised that PCA9685 has a seperate servo (6V+) and circuit logic power via (5V+ Vcc)
 - Following Mike's layout, we resolved to power the PCA9685 with the SZBK07 at 6V with maybe a fuse in the middle to protect the PCA and power the Raspberry Pi using the LM2596 at 5V.
 - Antonio suggested to power the servos seperately since the PCA9685 internal rails cap out at 12A.
 - We note most online implementations do not power the PCA9685 with a SZBK07 and instead directly hook into the battery.
-- Please see circuit diagram above for our first iteration circuit design, based on (mikes)[https://github.com/michaelkubina/SpotMicroESP32/tree/master/electronics] circuit design. I note the current and voltage sensors are not nesscary to protect ADC pins on the Raspberry pi we are not using.
+- Please see circuit diagram above for our first iteration circuit design, based on (mikes)[https://github.com/michaelkubina/SpotMicroESP32/tree/master/electronics] circuit design. I note the current and voltage sensors are not necessary to protect ADC pins on the Raspberry pi we are not using.
 
-## 14th May 2025
+## 14th May 2026
 - The Servo motors finally arrived!
 - We spent the day building the robotic dog. Pictures TODO
-- We have concerns the RL learning module in our repo won't trasnfer to RL for the robo dog.
+- We have concerns the RL learning module in our repo won't transfer to RL for the robo dog.
+
+## 20th August 2026 
+- After a 3 month hiatus, we finally return to the robo dog.
+- Within that time we assembled all the legs and frame of the body with relatively no issues.
+- Currently the building progress has been put on hold to properly calibrate the servos, this process as not been so smooth.
+- Long story short, after firing two arduinos and hours of going in circles, we have finally settled on a calibration method!
+- Although properly calibrating servos is quite the hurdle at the moment, spending this time will allow us:
+  - To ensure the robo has the proper range of motion
+  - To rule out and/or be aware of hardware issue when writing and debugging code later down the line.
+- Details of calibration is avaliable in the 'calibration' directory, compiled by Jacky.
+
+
