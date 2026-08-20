@@ -1,4 +1,4 @@
-Calibration of the servos:
+# Calibration of the servos:
 - The MG699R motor is a hobby motor that does not take bit numbers as PWM (Duty Cycle) values - instead it takes microseconds (according to chatgpt) or it takes the supposedly ‘1 to 1’ servo.write to angle.
 - Our guess is that servo.write value theoretically should be 1 to 1 with the actual angle —> BUT because of how servos work with an encoder that accumualtes an epilson that subtely increases the error margin - from 30 vs 30, to 90 vs 98. We have not identified a strong pattern for this, but do know that it should be growing. David suggested the graph make be wavy going upwards OR considered if this was fault due to..
 - Another issue that arised is that 90 angle was equal to 90 servo write at the begining but changed to 98 whilst continuing - we had questions on whether this was the servo internals degrading over time? or just an error in our initial measurement (which we swear it’s not)
