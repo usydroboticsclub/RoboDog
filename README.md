@@ -58,7 +58,7 @@ https://github.com/Nate711/StanfordDoggoProject
 - After a 3 month hiatus, we finally return to the robo dog.
 - Within that time we assembled all the legs and frame of the body with relatively no issues.
 - Currently the building progress has been put on hold to properly calibrate the servos, this process as not been so smooth.
-- Long story short, after firing two arduinos and hours of going in circles, we have finally settled on a calibration method!
+- Long story short, after frying two arduinos and hours of going in circles, we have finally settled on a calibration method!
 - Although properly calibrating servos is quite the hurdle at the moment, spending this time will allow us:
   - To ensure the robo has the proper range of motion
   - To rule out and/or be aware of hardware issue when writing and debugging code later down the line.
