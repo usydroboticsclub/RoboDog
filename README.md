@@ -62,6 +62,6 @@ https://github.com/Nate711/StanfordDoggoProject
 - Although properly calibrating servos is quite the hurdle at the moment, spending this time will allow us:
   - To ensure the robo has the proper range of motion
   - To rule out and/or be aware of hardware issue when writing and debugging code later down the line.
-- Details of calibration is avaliable in the 'calibration' directory, compiled by Jacky.
+- Details of calibration is avaliable in the 'Calibration' directory, compiled by Jacky.
 
 
