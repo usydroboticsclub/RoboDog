@@ -81,4 +81,4 @@ https://github.com/Nate711/StanfordDoggoProject
   - SCL -> arduino A5 pin. Serial Clock
   - OE -> none
   - GND -> breadboard common ground.
-  
+- The output pins are connected to the motors, where the board provides the common ground, V+ from the buck converter and PWM pin 
