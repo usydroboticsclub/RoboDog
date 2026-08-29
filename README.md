@@ -1,4 +1,3 @@
-<img width="4284" height="5712" alt="IMG_7346" src="https://github.com/user-attachments/assets/810cb37e-7c02-481e-9271-01a39619d536" /># RoboDog
 This Repo is for our robot dog mascot. We aim to use other repos to make it.
 
 # RoboDog Checklist
