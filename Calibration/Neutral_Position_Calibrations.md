@@ -32,7 +32,7 @@ Posture stabilizing control of quadruped robot based on cart-inverted pendulum m
 
 # Position Calibration:
 
-Two facts have caused up significant confusion in up to this point in the process of position calibration:
+Combination of the following two statements have caused us significant confusion in up to this point in the process of position calibration:
 
 1. The left and right legs are mirrored images of another.
 2. Servos have a fixed positive direction when sweeping from the zero to max position.
