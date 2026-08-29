@@ -1,4 +1,4 @@
-The following position were calibration were written with reference to Mikes Robodog Github.
+The following position were calibration were written with reference to Mike's Robodog Github.
 
 # Conventions
 
@@ -37,7 +37,7 @@ Combination of the following two statements have caused us significant confusion
 1. The left and right legs are mirrored images of another.
 2. Servos have a fixed positive direction when sweeping from the zero to max position.
 
-- Consider a clock, if you are were facing the clock the numbers would increase in a clockwise direction (obviously), now place the clock in front of a mirror, suddenly the 3 and 9 switch position and the number increase in a counter-clockwise direction.
+- Consider a clock, if you are were facing the clock, the numbers would increase in a clockwise direction (obviously), now place the clock in front of a mirror, suddenly the 3 and 9 switch position and the number increase in a counter-clockwise direction.
 <img width="795" height="463" alt="image" src="https://github.com/user-attachments/assets/59835c0a-7186-4279-a41d-cb6baf71fd4e" />
 
 - Now imagine the clock-hand can only move between 12,1,2,3,4,5,6. if we set our initial position to 12 when the clock is facing us, we can move 180 degrees clockwise to 6. However when the clock in mirrored, leaving the initial position at 12, it would be counter-clockwise to 6.
