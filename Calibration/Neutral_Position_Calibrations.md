@@ -32,19 +32,24 @@ Posture stabilizing control of quadruped robot based on cart-inverted pendulum m
 
 # Position Calibration:
 
-Combination of the following two statements have caused us significant confusion in up to this point in the process of position calibration:
+Combination of the following two statements have caused us significant confusion up to this point in the process of position calibration:
 
 1. The left and right legs are mirrored images of another.
 2. Servos have a fixed positive direction when sweeping from the zero to max position.
 
-- Consider a clock, if you are were facing the clock the number would increase in a clockwise direction (obviously), however place the clock in front of a mirror, suddenly the 3 and 9 switch position and the number increase in a counter-clockwise direction.
+- Consider a clock, if you are were facing the clock the numbers would increase in a clockwise direction (obviously), now place the clock in front of a mirror, suddenly the 3 and 9 switch position and the number increase in a counter-clockwise direction.
 <img width="795" height="463" alt="image" src="https://github.com/user-attachments/assets/59835c0a-7186-4279-a41d-cb6baf71fd4e" />
 
-- Now image the clock hand can only move between 12 and 6, if we set our neutral position to 6 when the clock is facing up we can move 180 degrees counter-clockwise to 12. However when we flip the clock backside up, leaving the neutral position to 6, we won't be able to move any more counter-clockwise. (it would be clockwise to 12 now).
-<img width="826" height="476" alt="image" src="https://github.com/user-attachments/assets/dfd52f63-3c3c-481a-9e83-cb2d85ede2fd" />
+- Now imagine the clock-hand can only move between 12,1,2,3,4,5,6. if we set our initial position to 12 when the clock is facing us, we can move 180 degrees clockwise to 6. However when the clock in mirrored, leaving the initial position at 12, it would be counter-clockwise to 6.
+<img width="849" height="407" alt="image" src="https://github.com/user-attachments/assets/b55621c7-4928-4864-8ab9-4382d62f43a3" />
 
-Thus for the hip pitch and knee pitch, we need to set the zero positions on opposite sides of another:
-  
+Our goal is the active this kind of transformation by changing initial position and direction of rotation.
+<img width="849" height="407" alt="image" src="https://github.com/user-attachments/assets/3ebcc05b-ad1d-4375-a1c3-fb335216b211" />
+
+In the 'transformed' clock, two transformations were applied: First, the initial position was changed from 12 to 6, second the rotation was reversed from clockwise to counter-clockwise. Although the entire clock was rotated in the end to match the mirrored image above, as servo motors have rotational symmetry, (moving from 12 to 3 is the same movement of moving 6 to 9 for a servo) this wouldn't be considered a transformation. Thus the 'mirrored' transformation is achieved.
+
+
+
 **Knee Pitch:**
   - For this joint we set the zero/max position first then rotate to the neutral position. This is to ensure the upper and lower legs are flush when the robodog is in the sitting position.
   - As shown on the diagram, on the left, we set the servo to its zero position then insert the servo horn. On the right we set the servo to its max position then insert the servo horn.
@@ -52,15 +57,15 @@ Thus for the hip pitch and knee pitch, we need to set the zero positions on oppo
      
      (Image was modified from Mike's Github)
   - The arrows on the diagram above represent the direction of the range of motion. On the left, the servo is able to rotate clockwise by theta where theta is the an inputted angle between 0 and 180. For the right, the servo is able to rotate counter-clockwise an angle of theta by inputing 180 minus theta. Thus we have a system of moving an angle of theta despite the transformation between left and right legs, as well as preserving the range of motion of the servos. (Note: When a servo is fixed, the servo shaft spins counterclockwise from 0 to 180. However, in this build the servo shaft is fixed instead causing the servo itself to rotate clockwise)  
-  - The desired **neutral position** for the ** knee pitch** of both legs is **90 degrees**, which is achieved by simply inputting an angle of 90. (left: 0+90 = 90, right: 180-90 = 90)
+  - The desired **neutral position** for the **knee pitch** of both legs is **90 degrees**, which is achieved by simply inputting an angle of 90. (left: 0+90 = 90, right: 180-90 = 90)
   
 **Hip Pitch**
    - For this joint, we first set the neutral positions first instead.
-   - On the left, we set the servo to 60 degrees then attach it to the shoulder joint. On the right, we set the servo to 120 degrees before attaching it to the shoulder joint. (note an input of 130 may be required for an physical angle of 120 - please make note of these issues when during calibration)
+   - On the left, we set the servo to 60 degrees then attach it to the shoulder joint. On the right, we set the servo to 120 degrees before attaching it to the shoulder joint. (note an input of 130 may be required for an physical angle of 120 - please make note of these issues during calibration)
      <img width="853" height="556" alt="image" src="https://github.com/user-attachments/assets/c2396d53-bda7-4b87-baaa-22f71161b82e" />
      
      (Image was modified from Mike's Github)
-   - Similar to the knee pitch the left servo spins clockwise by an angle of theta, when 60 plus theta is inputed and the right servo spins counterclockwise by an angle of theta, when 120 minis theta is inputed.
+   - Similar to the knee pitch the left servo spins clockwise by an angle of theta, when 60 plus theta is inputed and the right servo spins counterclockwise by an angle of theta, when 120 minus theta is inputed.
    - As previous implied the **neutral position** of the **left leg is 60 degrees** and the neutral position of the **right leg is 120 degrees**.
 
 **Hip Roll**    
