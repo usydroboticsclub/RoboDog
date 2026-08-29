@@ -49,6 +49,7 @@ Two facts have caused up significant confusion in up to this point in the proces
   - For this joint we set the zero/max position first then rotate to the neutral position. This is to ensure the upper and lower legs are flush when the robodog is in the sitting position.
   - As shown on the diagram, on the left, we set the servo to its zero position then insert the servo horn. On the right we set the servo to its max position then insert the servo horn.
      <img width="853" height="735" alt="image" src="https://github.com/user-attachments/assets/126f4ac1-2a9f-46c0-854f-213b5809c2b9" />
+     
      (Image was modified from Mike's Github)
   - The arrows on the diagram above represent the direction of the range of motion. On the left, the servo is able to rotate clockwise by theta where theta is the an inputted angle between 0 and 180. For the right, the servo is able to rotate counter-clockwise an angle of theta by inputing 180 minus theta. Thus we have a system of moving an angle of theta despite the transformation between left and right legs, as well as preserving the range of motion of the servos. (Note: When a servo is fixed, the servo shaft spins counterclockwise from 0 to 180. However, in this build the servo shaft is fixed instead causing the servo itself to rotate clockwise)  
   - The desired **neutral position** for the ** knee pitch** of both legs is **90 degrees**, which is achieved by simply inputting an angle of 90. (left: 0+90 = 90, right: 180-90 = 90)
@@ -57,6 +58,7 @@ Two facts have caused up significant confusion in up to this point in the proces
    - For this joint, we first set the neutral positions first instead.
    - On the left, we set the servo to 60 degrees then attach it to the shoulder joint. On the right, we set the servo to 120 degrees before attaching it to the shoulder joint. (note an input of 130 may be required for an physical angle of 120 - please make note of these issues when during calibration)
      <img width="853" height="556" alt="image" src="https://github.com/user-attachments/assets/c2396d53-bda7-4b87-baaa-22f71161b82e" />
+     
      (Image was modified from Mike's Github)
    - Similar to the knee pitch the left servo spins clockwise by an angle of theta, when 60 plus theta is inputed and the right servo spins counterclockwise by an angle of theta, when 120 minis theta is inputed.
    - As previous implied the **neutral position** of the **left leg is 60 degrees** and the neutral position of the **right leg is 120 degrees**.
@@ -65,6 +67,7 @@ Two facts have caused up significant confusion in up to this point in the proces
     - For this joint, we set a **neutral position** of **90 degrees** for all the shoulder and insert it into the body.
     - With this joint, as well as having the left and right shoulder being mirrored, the front and back shoulder are also mirrored.
     <img width="893" height="379" alt="image" src="https://github.com/user-attachments/assets/c0f91048-b982-4e4e-b251-581bca1552fb" />
+    
     (Image was modified from Mike's Github. The FL - front left, FR - front right, BL - back left, BR - back right)
     - This results in a interesting phenomena where the front left and back front both move theta clockwise when 90 plus theta is inputed. The same is expected with the front right and back left, which would move an angle of theta counterclockwise when 90 minus theta is inputted.
     
