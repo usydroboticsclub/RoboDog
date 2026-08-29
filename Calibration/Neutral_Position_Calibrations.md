@@ -23,11 +23,11 @@ Posture stabilizing control of quadruped robot based on cart-inverted pendulum m
 
 **Position Conventions:**
 
-**Zero Position**: The position of the servo when 0 degree input by a microcontroller
+- Zero Position: The position of the servo when 0 degree input by a microcontroller
 
-**Max Position**: The maximum position the servo will go to, usually when 180 degrees is input by a microcontroller. (Note the physical angle was generally found to be around 170 degrees)
+- Max Position: The maximum position the servo will go to, usually when 180 degrees is input by a microcontroller. (Note the physical angle was generally found to be around 170 degrees)
 
-**Neutral Position**: The position the servo will be in when the robo dog is standing.
+- Neutral Position: The position the servo will be in when the robo dog is standing.
 
 
 # Position Calibration:
@@ -63,13 +63,13 @@ Thus for the hip pitch and knee pitch, we need to set the zero positions on oppo
    - Similar to the knee pitch the left servo spins clockwise by an angle of theta, when 60 plus theta is inputed and the right servo spins counterclockwise by an angle of theta, when 120 minis theta is inputed.
    - As previous implied the **neutral position** of the **left leg is 60 degrees** and the neutral position of the **right leg is 120 degrees**.
 
-**Hip Roll:**    
-    - For this joint, we set a **neutral position** of **90 degrees** for all the shoulder and insert it into the body.
-    - With this joint, as well as having the left and right shoulder being mirrored, the front and back shoulder are also mirrored.
+**Hip Roll**    
+   - For this joint, we set a **neutral position** of **90 degrees** for all the shoulder and insert it into the body.
+   - With this joint, as well as having the left and right shoulder being mirrored, the front and back shoulder are also mirrored.
     <img width="893" height="379" alt="image" src="https://github.com/user-attachments/assets/c0f91048-b982-4e4e-b251-581bca1552fb" />
     
-    (Image was modified from Mike's Github. The FL - front left, FR - front right, BL - back left, BR - back right)
-    - This results in a interesting phenomena where the front left and back front both move theta clockwise when 90 plus theta is inputed. The same is expected with the front right and back left, which would move an angle of theta counterclockwise when 90 minus theta is inputted.
+   (Image was modified from Mike's Github. The FL - front left, FR - front right, BL - back left, BR - back right)
+   - This results in a interesting phenomena where the front left and back front both move theta clockwise when 90 plus theta is inputed. The same is expected with the front right and back left, which would move an angle of theta counterclockwise when 90 minus theta is inputted.
     
 
 
