@@ -1,4 +1,4 @@
-# RoboDog
+<img width="4284" height="5712" alt="IMG_7346" src="https://github.com/user-attachments/assets/810cb37e-7c02-481e-9271-01a39619d536" /># RoboDog
 This Repo is for our robot dog mascot. We aim to use other repos to make it.
 
 # RoboDog Checklist
@@ -54,7 +54,7 @@ https://github.com/Nate711/StanfordDoggoProject
 - We spent the day building the robotic dog. Pictures TODO
 - We have concerns the RL learning module in our repo won't transfer to RL for the robo dog.
 
-## 20th August 2026 
+## 19th August 2026 
 - After a 3 month hiatus, we finally return to the robo dog.
 - Within that time we assembled all the legs and frame of the body with relatively no issues.
 - Currently the building progress has been put on hold to properly calibrate the servos, this process as not been so smooth.
@@ -62,6 +62,23 @@ https://github.com/Nate711/StanfordDoggoProject
 - Although properly calibrating servos is quite the hurdle at the moment, spending this time will allow us:
   - To ensure the robo has the proper range of motion
   - To rule out and/or be aware of hardware issue when writing and debugging code later down the line.
-- Details of calibration is avaliable in the 'Calibration' directory, compiled by Jacky.
+- Details of calibration is available in the 'Calibration' directory, compiled by Jacky.
 
+## 26th August 2026
+- This week we continued with calibration of the servos
+- After further struggle with Mike's instruction, we have successfully workout the calibration/rest positions of the robodog's limbs
+- Parvez developed a calibration method where angle were typed into the serial input, which significantly streamlined the process. (added code to 'Calibration')
+- Additionally, Parvez managed to get the PCA9685 running off an arduino nano which allowed for multiple legs to be activated at the same time. (unfortunately a shoulder part went missing which meant the dogs balance was not able to be tested)
+- Some loose ends from this session include: the missing shoulder, missing nuts and bolts boxes, have not bolted the shoulder joint servo motor yet.
+<img width="4284" height="5712" alt="IMG_7346" src="https://github.com/user-attachments/assets/84cd02c2-afae-4e3a-80e4-ab71e53aad17" />
 
+- Above is the an image of the legs attached to the body, with one leg missing due to the missing shoulder. 
+- To the left is a buck converter which connects from the LiPo 7.4V to the PCA9685 V+ and the common ground between the arduino and PCA9685. It's purpose is to drop the 7.4V to 6V (servo's operating range is 4.8-7.2V)
+- To the right with the many wires is the PCA9685 which allows the arduino to control all the servos independently with two microcontroller pins. There are 6 input pins: From bottom to top: V+, Vcc, SDA, SCL, OE, GND.
+  - V+ -> buck convert 6V +output. This is to power the motors.
+  - Vcc -> arduino 5V pin. This is to power the PCA9685 board itself
+  - SDA -> arduino A4 pin. Serial Data 
+  - SCL -> arduino A5 pin. Serial Clock
+  - OE -> none
+  - GND -> breadboard common ground.
+  
