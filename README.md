@@ -82,7 +82,7 @@ https://github.com/Nate711/StanfordDoggoProject
   - GND -> breadboard common ground.
 - The output pins are connected to the motors, where the board provides the common ground, V+ from the buck converter and PWM pins
 
-Brief IC2 Explanation:
+Brief I2C Explanation:
 - SDA is the line where data/messages between the pca and motors are sent
 - SCL is to make sure the message are in sync (cause there is only one line of communication so we need to make sure only one ‘message’ travels up or down at any given moment) 
 - The message has 4 main stages: Initiation -> main address (pca) -> local address (pins from 0-15) + pwm signal -> Conclusion  
