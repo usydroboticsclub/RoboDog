@@ -7,8 +7,8 @@ Adafruit_PWMServoDriver pca9685(0x40);
 const int servoFrequency = 50;
 
 // Conservative MG90S pulse range
-const int minimumPulseUS = 1000;
-const int maximumPulseUS = 2000;
+const int minimumPulseUS = 550;
+const int maximumPulseUS = 2500;
 
 void moveServo(int channel, int angle)
 {
