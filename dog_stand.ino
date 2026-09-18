@@ -7,8 +7,8 @@ Adafruit_PWMServoDriver pca9685(0x40);
 const int servoFrequency = 50;
 
 // Conservative MG90S pulse range
-const int minimumPulseUS = 500;
-const int maximumPulseUS = 2400;
+const int minimumPulseUS = 550;
+const int maximumPulseUS = 2500;
 
 void moveServo(int channel, int angle)
 {
@@ -57,15 +57,15 @@ void sitdog()
   moveServo(12, 90);
 
   // plane shoulder joint
-  moveServo(1, 90); //Left Front
-  moveServo(5, 120); //Right Front
-  moveServo(9, 60); //Left Front
-  moveServo(12, 120); //Right Front
+  moveServo(1, 0); //Left Front
+  moveServo(5, 180); //Right Front
+  moveServo(9, 0); //Left Front
+  moveServo(13, 180); //Right Front
 
   // elbow joint
   moveServo(2, 0);  //Left Front
-  moveServo(6, 180); //Right Front
-  moveServo(10, 0); //Left Back
+  moveServo(6, 178); //Right Front
+  moveServo(10, 3); //Left Back
   moveServo(14, 180); //Right Back
 }
 
@@ -88,17 +88,16 @@ void loop()
 {
   if (Serial.available() > 0)
   {
-    bool Stand = (Serial.parseInt()==1);
-    bool Sit = (Serial.parseInt()==0);
+    int command = Serial.parseInt()
 
 
 
-    if (Stand) {
+    if (command == 1) {
       Serial.println("Making dog stand.");
       standdog();
     }
 
-    if (Sit) {
+    if (command 0) {
       Serial.println("Making dog sit.");
       sitdog();
     }
